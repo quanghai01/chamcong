@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Pro - Hệ Thống Chấm Công Tự Động</title>
+  <meta name="description" content="Ứng dụng xử lý dữ liệu chấm công chuyên nghiệp từ file Excel.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+</head>
+<body>
+  <div class="background-elements">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <main class="container">
+    <header>
+      <h1>Attendance<span>Pro</span></h1>
+      <p>Kéo thả file Excel chấm công của bạn vào đây để tự động tạo báo cáo kết quả.</p>
+    </header>
+
+    <div class="upload-area" id="uploadArea">
+      <i data-lucide="upload-cloud" class="icon-upload"></i>
+      <h2>Kéo thả file vào đây</h2>
+      <p>hoặc</p>
+      <button id="browseBtn" class="btn-primary">Chọn File</button>
+      <input type="file" id="fileInput" accept=".xls,.xlsx" hidden>
+    </div>
+
+    <div class="status-area hidden" id="statusArea">
+      <div class="spinner" id="spinner"></div>
+      <p id="statusText">Đang xử lý dữ liệu...</p>
+      <button id="downloadBtn" class="btn-success hidden">
+        <i data-lucide="download"></i> Tải Xuống Kết Quả
+      </button>
+      <button id="resetBtn" class="btn-secondary hidden">Xử lý file khác</button>
+    </div>
+    <footer>
+      <p>&copy; 2026 AttendancePro. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
